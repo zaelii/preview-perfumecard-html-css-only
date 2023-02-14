@@ -1,0 +1,125 @@
+/*
+  CSS RESET
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+h1,h2,h3 {
+    line-height: 1;
+
+}
+/*
+  FIM DO CSS RESET
+*/
+
+:root {
+    --clr-darkcyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+    
+    --clr-vdarkblue: hsl(212, 21%, 14%);
+    --clr-darkgrayishblue: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-base: 'Montserrat', sans-serif;
+    --ff-accent: 'Libre Franklin', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+/* utilitario */
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    background-color: var(--clr-cream);
+
+
+    /* mobile */
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+.precos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.produto {
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+    background-color: var(--clr-white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.produto-conteudo {
+
+    display: grid;
+    gap: var(--content-spacing);
+    padding: var(--content-padding)
+}
+
+.produto-categoria {
+    font-size: .8125rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.produto-titulo {
+    border: solid red;
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-vdarkblue);
+}
+
+.preco-promocional {
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-darkcyan);
+}
